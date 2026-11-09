@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#050b1a">
+<title>Ponto Aquático</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="menu" class="ov show"><div class="card">
+  <h1>PONTO<br><span>AQUÁTICO</span></h1>
+  <button id="bOn" class="y" data-go="online">Modo Online</button>
+  <button class="c" data-go="local">Modo Local</button>
+</div></div>
+
+<div id="local" class="ov"><div class="card">
+  <h2>Quantos jogadores?</h2>
+  <div class="row"><button class="y" data-n="2">2</button><button class="r" data-n="3">3</button><button class="g" data-n="4">4</button></div>
+  <p class="hint">Cada jogador usa o seu lado da tela:<br>arraste para mirar e solte para atirar.</p>
+  <button class="w" data-go="menu">Voltar</button>
+</div></div>
+
+<div id="online" class="ov"><div class="card">
+  <h2>Modo Online</h2>
+  <button id="mk" class="y">Criar Sala</button>
+  <p class="hint">ou entre com o código</p>
+  <input id="code" maxlength="4" placeholder="ABCD" autocomplete="off" autocapitalize="characters">
+  <button id="jn" class="c">Entrar na Sala</button>
+  <p id="om" class="hint"></p>
+  <button class="w" data-go="menu">Voltar</button>
+</div></div>
+
+<div id="lobby" class="ov"><div class="card">
+  <h2>Sala</h2>
+  <div id="rc">----</div>
+  <button id="cp" class="w">Copiar link de convite</button>
+  <ul id="pl"></ul>
+  <p id="lm" class="hint"></p>
+  <button id="st" class="g">Iniciar Jogo</button>
+  <button class="w" data-go="menu">Sair</button>
+</div></div>
+
+<div id="end" class="ov2"><div class="card">
+  <h2 id="et"></h2>
+  <button id="again" class="y">Jogar de novo</button>
+  <button class="w" id="bm">Menu</button>
+</div></div>
+
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
